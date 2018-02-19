@@ -26,6 +26,10 @@ class Student(models.Model):
 
     created_time = models.DateTimeField(auto_now_add=True, editable=False, verbose_name="创建时间")
 
+    @property
+    def sex_show(self):
+        return dict(self.SEX_ITEMS)[self.sex]
+
     def __unicode__(self):
         return '<Student: {}>'.format(self.name)
 
