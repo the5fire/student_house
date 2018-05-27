@@ -30,7 +30,7 @@ class Student(models.Model):
     def sex_show(self):
         return dict(self.SEX_ITEMS)[self.sex]
 
-    def __unicode__(self):
+    def __str__(self):
         return '<Student: {}>'.format(self.name)
 
     class Meta:

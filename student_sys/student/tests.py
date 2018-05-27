@@ -39,7 +39,7 @@ class StudentTestCase(TestCase):
         )
         name = 'the5fire'
         students = Student.objects.filter(name=name)
-        self.assertEqual(students.count(), 1, '应该只存在一个名称为{name}的记录'.format(name=name))
+        self.assertEqual(students.count(), 1, '应该只存在一个名称为{}的记录'.format(name))
 
     def test_get_index(self):
         # 测试首页的可用性
